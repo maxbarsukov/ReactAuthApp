@@ -1,5 +1,3 @@
-# React/Redux/Router Starter Project
+# ReactAuthApp
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+This is frontend for [React-Rails-API-Authentication](https://github.com/maxbarsukov/React-Rails-API-Authentication)
