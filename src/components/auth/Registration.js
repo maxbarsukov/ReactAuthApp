@@ -17,9 +17,9 @@ export default class Registration extends Component {
   }
 
     handleSubmit(event) {
-        console.log("form submitted");
+        const { email, password, password_confirmation } = this.state;
+
         event.preventDefault();
-        
     }
 
     handleChange(event) {
