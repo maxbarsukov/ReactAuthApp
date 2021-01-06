@@ -6,6 +6,7 @@ export default class Home extends Component {
         return (
             <div>
                 <h1>Hello</h1>
+                <h1>Status: {this.props.loggedInStatus}</h1>
                 <Registration/>
             </div>
         );
