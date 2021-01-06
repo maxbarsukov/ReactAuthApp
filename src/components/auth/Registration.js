@@ -22,7 +22,9 @@ export default class Registration extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}></form>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleGhange} required/>
+                </form>
             </div>
         );
     }
