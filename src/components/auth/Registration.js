@@ -38,13 +38,13 @@ export default class Registration extends Component {
         })
         .catch(error => {
             console.log("registration error", error);
-        });
+        })
         event.preventDefault();
     }
 
     handleChange(event) {
         this.setState({
-        [event.target.name]: event.target.value
+            [event.target.name]: event.target.value
         });
     }
 
