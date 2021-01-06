@@ -16,39 +16,39 @@ export default class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-    handleSubmit(event) {
-        const { email, password, password_confirmation } = this.state;
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
 
-        axios
-        .post(
-            "http://localhost:3001/registrations",
-            {
-            user: {
-                email: email,
-                password: password,
-                password_confirmation: password_confirmation
-            }
-            },
-            { withCredentials: true }
-        )
-        .then(response => {
-            if (response.data.status === "created") {
-            this.props.handleSuccessfulAuth(response.data);
-            }
-        })
-        .catch(error => {
-            console.log("registration error", error);
-        });
-        event.preventDefault();
-    }
+  handleSubmit(event) {
+    const { email, password, password_confirmation } = this.state;
 
-    handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    }
+    axios
+      .post(
+        "http://localhost:3001/registrations",
+        {
+          user: {
+            email: email,
+            password: password,
+            password_confirmation: password_confirmation
+          }
+        },
+        { withCredentials: true }
+      )
+      .then(response => {
+        if (response.data.status === "created") {
+          this.props.handleSuccessfulAuth(response.data);
+        }
+      })
+      .catch(error => {
+        console.log("registration error", error);
+      });
+    event.preventDefault();
+  }
 
-    render() {
+  render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
