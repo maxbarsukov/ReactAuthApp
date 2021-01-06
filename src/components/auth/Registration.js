@@ -11,12 +11,17 @@ export default class Registration extends Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleSubmit(event) {
         console.log("form submitted");
         event.preventDefault();
         
+    }
+
+    handleChange(event) {
+        console.log("handle change", event);
     }
 
     render() {
