@@ -9,6 +9,11 @@ export default class Home extends Component {
         this.handleLogoutClick = this.handleLogoutClick.bind(this);
     }
 
+    handleSuccessfulAuth(data) {
+        // TODO
+        this.props.history.push("/dashboard");
+    }
+
     render() {
         return (
             <div>
